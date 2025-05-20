@@ -9,13 +9,7 @@ export function App() {
   }
 
   function handleEsconder() {
-    if (escondido === false) {
-      setEscondido(true)
-
-    }
-
-    setEscondido(false)
-
+    escondido ? setEscondido(false) : setEscondido(true)
   }
 
   return (
@@ -38,4 +32,4 @@ export function App() {
   )
 }
 
-export default App
+
