@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 export function App() {
   const [numero, setNumero] = useState(100)
+  const [mardito, setMudarMardito] = useState("Fiesta")
   const [escondido, setEscondido] = useState(false)
 
   function handleAumentar() {
@@ -11,10 +12,13 @@ export function App() {
   function handleEsconder() {
     if (escondido === false) {
       setEscondido(true)
-      
-    setEscondido(false)
-  
+      setMudarMardito("")
+
     }
+
+    setEscondido(false)
+    setMudarMardito("Fiesta")
+
   }
 
   return (
@@ -28,7 +32,10 @@ export function App() {
       </section>
 
       <section>
-        <p></p>
+        <h2>O carro amaldiçoado:</h2>
+        <p>{mardito}</p>
+
+        <button onClick={handleEsconder}>Esconder</button>
       </section>
     </main>
   )
