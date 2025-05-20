@@ -30,7 +30,7 @@ export function App() {
 
       <section>
         <h2>O carro amaldiçoado:</h2>
-        {setEscondido ? <p>Fiesta</p> : ""}
+        {escondido ? <p>Fiesta</p> : ""}
 
         <button onClick={handleEsconder}>Esconder</button>
       </section>
